@@ -11,4 +11,4 @@ This gets the input from the buttonboard and relays it to the python script on a
 
 I'm having a difficult time finding a well-developed python library to interface with audio files. I'm hoping to interface with ableton because it has powerful features including recording, effects, and audio playback. 
 
-This link has me thinking it might be possible. http://remotescripts.blogspot.com/
+This article has me thinking it might be possible. http://remotescripts.blogspot.com/
