@@ -6,6 +6,10 @@ import serial
 gui = Tk()
 ser = serial.Serial('/dev/ttyACM0')
 
+'''
+    class Muxer
+        I/O port for teensy output via serial connection
+'''
 
 class Muxer:
 
@@ -15,6 +19,7 @@ class Muxer:
         self.widgets = []
         self.state = []
 
+    #setups tkinter
     def setup(self):
         self.setupState()
         self.setupWdigets()
@@ -55,9 +60,10 @@ class Muxer:
         gui.mainloop()
 
     def loop(self):
-        for r in range(nRows):
-            for c in range(nCols):
-                if (state[r][c] == True):
-                    widgets[r][c].flash()
-        gui.mainloop()
+        while True:
+            for r in range(nRows):
+                for c in range(nCols):
+                    if (state[r][c] == True):
+                        widgets[r][c].flash()
+            gui.mainloop()
 
